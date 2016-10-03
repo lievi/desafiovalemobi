@@ -23,7 +23,7 @@ namespace Persistencia.DAL
         //Listar Mercadorias
         public IQueryable<Mercadoria> Listar()
         {
-            return db.Mercadoria.OrderBy(x => x.NomeMercadoria).Include(t =>t.Tipo).OrderBy(x => x.NomeMercadoria);
+            return db.Mercadoria.OrderBy(x => x.NomeMercadoria).Include(t =>t.Tipo).OrderBy(x => x.NomeMercadoria);            
         }
     }
 }
