@@ -70,6 +70,18 @@
     <Compile Include="Migrations\201610030014283_teste.Designer.cs">
       <DependentUpon>201610030014283_teste.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610032131586_double.cs" />
+    <Compile Include="Migrations\201610032131586_double.Designer.cs">
+      <DependentUpon>201610032131586_double.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610032150430_String.cs" />
+    <Compile Include="Migrations\201610032150430_String.Designer.cs">
+      <DependentUpon>201610032150430_String.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610032159425_String1.cs" />
+    <Compile Include="Migrations\201610032159425_String1.Designer.cs">
+      <DependentUpon>201610032159425_String1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -95,6 +107,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610030014283_teste.resx">
       <DependentUpon>201610030014283_teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610032131586_double.resx">
+      <DependentUpon>201610032131586_double.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610032150430_String.resx">
+      <DependentUpon>201610032150430_String.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610032159425_String1.resx">
+      <DependentUpon>201610032159425_String1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

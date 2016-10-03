@@ -26,10 +26,10 @@ namespace Modelo
         public int QtdMercadoria { get; set; }
 
         [DisplayName("Valor")]
-        [RegularExpression(@"[0-9]{0,10}[,]{0,1}[0-9]{0,4}",ErrorMessage = "Digite um valor com vírgula")]
-        public float ValorMercadoria { get; set; }
+        public string ValorMercadoria { get; set; }
 
         //Foreng Key
+        [DisplayName("Tipo de Mercadoria")]
         public long? TipoId { get; set; }
         public Tipo Tipo { get; set; }
     }
