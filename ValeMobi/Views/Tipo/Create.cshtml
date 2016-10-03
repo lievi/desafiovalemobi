@@ -1,0 +1,50 @@
+﻿@model Modelo.Tipo
+
+@{
+    ViewBag.Title = "Criar";
+}
+
+<h2>Adicionar novo Tipo de Mercadoria</h2>
+
+@using (Html.BeginForm("Create", "Tipo", null, FormMethod.Post, new {@name = "form" }))
+{
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+        <h4>Tipo</h4>
+        <hr />
+        <div class="form-group" id="div">
+            @Html.LabelFor(model => model.NomeTipo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NomeTipo, new { htmlAttributes = new { @class = "form-control", @id = "NomeTipo" } })
+            </div>
+        </div>
+    </div>
+}
+<button id="btnSubmit" value="Create" class="btn btn-default">Criar</button>
+<div>
+    @Html.ActionLink("Voltar para a lista", "Index")
+</div>
+
+
+
+<script type="text/javascript">
+    //DOM
+    var txtNomeTipo, btnSubmit, erro;
+
+    txtNomeTipo = document.getElementById("NomeTipo");
+    btnSubmit = document.getElementById("btnSubmit");
+
+    btnSubmit.onclick = function()
+    {
+        if(txtNomeTipo.value === "")
+        {
+            txtNomeTipo.placeholder = "Campo Nome é obrigatório";
+
+        }else
+        {
+            document.form.submit();
+        }
+    }
+
+</script>

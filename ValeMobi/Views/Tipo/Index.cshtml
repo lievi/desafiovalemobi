@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Modelo.Tipo>
+
+@{
+    ViewBag.Title = "Lista de Tipos de Mercadoria";
+}
+
+<h2>Lista de Tipos de Mercadoria</h2>
+
+<p>
+    @Html.ActionLink("Criar novo tipo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeTipo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeTipo)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.TipoId })
+        </td>
+    </tr>
+}
+
+</table>

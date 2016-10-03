@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Modelo.Mercadoria>
+
+@{
+    ViewBag.Title = "Lista de Operações";
+}
+
+<h2>Lista de Operações</h2>
+
+<p>
+    @Html.ActionLink("Criar nova operação", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Código
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeMercadoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoNegocio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QtdMercadoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorMercadoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo.NomeTipo)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MercadoriaId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeMercadoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoNegocio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtdMercadoria)
+        </td>
+        <td>
+            R$ @Html.DisplayFor(modelItem => item.ValorMercadoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo.NomeTipo)
+        </td>
+    </tr>
+}
+
+</table>
